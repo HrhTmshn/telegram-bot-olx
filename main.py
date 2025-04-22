@@ -9,13 +9,17 @@ def get_params(name_file: str):
 
 
 if __name__ == '__main__':
-    config = get_params('config.json')
-    messages = get_params('messages.json')
-    bot = Bot(
-        TOKEN=config["TOKEN"],
-        DB_PATH="database.db",
-        messages=messages,
-        password=config["password"],
-        ADMIN_ID=config["ADMIN_ID"],
-    )
-    bot.run()
+    try:
+        config = get_params('config.json')
+    except FileNotFoundError:
+        print(f'Create a config.json file in the root directory of the project with the following content:/n"TOKEN": "your_token",/n"ADMIN_ID": 000000000000,/n"password": "password"')
+    else:    
+        messages = get_params('messages.json')
+        bot = Bot(
+            TOKEN=config["TOKEN"],
+            DB_PATH="database.db",
+            messages=messages,
+            password=config["password"],
+            ADMIN_ID=config["ADMIN_ID"],
+        )
+        bot.run()

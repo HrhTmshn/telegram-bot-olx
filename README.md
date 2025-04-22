@@ -2,6 +2,13 @@
 
 A Python bot that scrapes OLX website based on a given URL with selected filters (category, query, city, price, condition, etc.) and monitors for new listings, notifying the user when a new listing is available.
 
+## Important Notes
+
+>⚠️ Disclaimer: This project was created for personal automation purposes. Some functionality may not be suitable for multi-user environments.
+> - This bot was designed primarily for personal use and currently supports **only one user at a time**. If you plan to adapt it for multi-user support, additional work is required (e.g., user management, session handling).
+> - Ensure you have a stable internet connection while running the script, as it relies on external requests to the OLX website.
+> - The bot will notify the user in Telegram whenever a new listing matching the specified filters is found.
+
 #### Stack:
 
 - [Python](https://www.python.org/downloads/)
@@ -57,12 +64,7 @@ To create an executable of the bot, follow these steps:
 
 2. Run PyInstaller with the spec file:
    ```bash
-   pyinstaller exe/main.spec
+   pyinstaller exe/olx.spec
    ```
 
 This will generate an executable in the dist folder, using the spec file located in the exe folder.
-
-## Notes
-
-   - Ensure you have a stable internet connection while running the script, as it relies on external requests to the OLX website.
-   - The bot will notify the user in Telegram whenever a new listing matching the specified filters is found.

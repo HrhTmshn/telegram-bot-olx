@@ -92,8 +92,9 @@ class Parse:
             self.data[id]['promo'] = bool(post.find_all(
                 attrs={'data-testid': 'adCard-featured'}
             ))
-            self.data[id]['name'] = post.find('h6').text
-            self.data[id]['price'] = post.find('p').text
+            self.data[id]['name'] = post.find('h4').text
+            self.data[id]['price'] = post.find(
+                attrs={'data-testid': 'ad-price'}).text
             self.__detect_post_type(id, post)
 
     def __detect_post_type(self, id, post):
