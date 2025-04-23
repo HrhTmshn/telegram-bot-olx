@@ -68,3 +68,10 @@ To create an executable of the bot, follow these steps:
    ```
 
 This will generate an executable in the dist folder, using the spec file located in the exe folder.
+
+## License
+
+This project is licensed for **educational and portfolio review purposes only**.  
+Commercial or personal use, distribution, or modification is **not permitted**.
+
+See the [LICENSE](./LICENSE) file for more details.

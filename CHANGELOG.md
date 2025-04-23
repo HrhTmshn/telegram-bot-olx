@@ -1,5 +1,9 @@
 # Changelog
 
+## [v_0.0.2] - 2025-04-23
+- Added `LICENSE` file with a custom "Portfolio Only" license
+- Updated `README.md` with license section
+
 ## [v_0.0.1] - 2025-04-22
 ### Changed
 - Translated all messages in `messages.json` from Russian to English for better readability.
